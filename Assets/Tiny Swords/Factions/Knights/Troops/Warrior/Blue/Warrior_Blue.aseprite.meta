@@ -75,8 +75,8 @@ ScriptedImporter:
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
-    defaultPivotAlignment: 7
-    customPivotPosition: {x: 0.5, y: 0.5}
+    defaultPivotAlignment: 0
+    customPivotPosition: {x: 0.5, y: 0.2}
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -87,15 +87,15 @@ ScriptedImporter:
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
-    defaultPivotAlignment: 7
-    customPivotPosition: {x: 0.5, y: 0.5}
+    defaultPivotAlignment: 0
+    customPivotPosition: {x: 0.5, y: 0.2}
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638439842995096850
+  platformSettingsDirtyTick: 638439951135218010
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,7 +121,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Warrior_Blue_Frame_0
     originalName: 
-    pivot: {x: 0.42307693, y: -0.61538464}
+    pivot: {x: 0.42307693, y: 0.43956047}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -141,7 +141,7 @@ ScriptedImporter:
     uvTransform: {x: 809, y: 479}
   - name: Warrior_Blue_Frame_1
     originalName: 
-    pivot: {x: 0.42307693, y: -0.61538464}
+    pivot: {x: 0.42307693, y: 0.43956047}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -161,7 +161,7 @@ ScriptedImporter:
     uvTransform: {x: 895, y: 479}
   - name: Warrior_Blue_Frame_2
     originalName: 
-    pivot: {x: 0.42307693, y: -0.61538464}
+    pivot: {x: 0.42307693, y: 0.43956047}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -181,7 +181,7 @@ ScriptedImporter:
     uvTransform: {x: 241, y: 590}
   - name: Warrior_Blue_Frame_3
     originalName: 
-    pivot: {x: 0.42500004, y: -0.62921345}
+    pivot: {x: 0.42500004, y: 0.4494382}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -201,7 +201,7 @@ ScriptedImporter:
     uvTransform: {x: 721, y: 479}
   - name: Warrior_Blue_Frame_4
     originalName: 
-    pivot: {x: 0.42500004, y: -0.6436781}
+    pivot: {x: 0.42500004, y: 0.45977014}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -221,7 +221,7 @@ ScriptedImporter:
     uvTransform: {x: 413, y: 590}
   - name: Warrior_Blue_Frame_5
     originalName: 
-    pivot: {x: 0.42307693, y: -0.6363636}
+    pivot: {x: 0.42307693, y: 0.4545455}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -241,7 +241,7 @@ ScriptedImporter:
     uvTransform: {x: 501, y: 590}
   - name: Warrior_Blue_Frame_6
     originalName: 
-    pivot: {x: 0.42307693, y: -0.61538464}
+    pivot: {x: 0.42307693, y: 0.43956047}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -261,7 +261,7 @@ ScriptedImporter:
     uvTransform: {x: 327, y: 590}
   - name: Warrior_Blue_Frame_7
     originalName: 
-    pivot: {x: 0.41666672, y: -0.6021505}
+    pivot: {x: 0.41666672, y: 0.43010753}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -281,7 +281,7 @@ ScriptedImporter:
     uvTransform: {x: 956, y: 129}
   - name: Warrior_Blue_Frame_8
     originalName: 
-    pivot: {x: 0.40579712, y: -0.59574467}
+    pivot: {x: 0.40579712, y: 0.42553192}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -301,7 +301,7 @@ ScriptedImporter:
     uvTransform: {x: 661, y: 590}
   - name: Warrior_Blue_Frame_9
     originalName: 
-    pivot: {x: 0.41025642, y: -0.7}
+    pivot: {x: 0.41025642, y: 0.50000006}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -321,7 +321,7 @@ ScriptedImporter:
     uvTransform: {x: 825, y: 590}
   - name: Warrior_Blue_Frame_10
     originalName: 
-    pivot: {x: 0.44210526, y: -0.6021505}
+    pivot: {x: 0.44210526, y: 0.43010753}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -341,7 +341,7 @@ ScriptedImporter:
     uvTransform: {x: 538, y: 274}
   - name: Warrior_Blue_Frame_11
     originalName: 
-    pivot: {x: 0.43820223, y: -0.59574467}
+    pivot: {x: 0.43820223, y: 0.42553192}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -361,7 +361,7 @@ ScriptedImporter:
     uvTransform: {x: 641, y: 274}
   - name: Warrior_Blue_Frame_12
     originalName: 
-    pivot: {x: 0.4177215, y: -0.7}
+    pivot: {x: 0.4177215, y: 0.50000006}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -381,7 +381,7 @@ ScriptedImporter:
     uvTransform: {x: 738, y: 590}
   - name: Warrior_Blue_Frame_13
     originalName: 
-    pivot: {x: 0.5352112, y: -0.5185185}
+    pivot: {x: 0.5352112, y: 0.3703704}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -401,7 +401,7 @@ ScriptedImporter:
     uvTransform: {x: 162, y: 590}
   - name: Warrior_Blue_Frame_14
     originalName: 
-    pivot: {x: 0.5492958, y: -0.5}
+    pivot: {x: 0.5492958, y: 0.35714287}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -421,7 +421,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 590}
   - name: Warrior_Blue_Frame_15
     originalName: 
-    pivot: {x: 0.5492958, y: -0.5}
+    pivot: {x: 0.5492958, y: 0.35714287}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -441,7 +441,7 @@ ScriptedImporter:
     uvTransform: {x: 83, y: 590}
   - name: Warrior_Blue_Frame_16
     originalName: 
-    pivot: {x: 0.18691586, y: -0.49107146}
+    pivot: {x: 0.18691586, y: 0.3660714}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -461,7 +461,7 @@ ScriptedImporter:
     uvTransform: {x: 858, y: 4}
   - name: Warrior_Blue_Frame_17
     originalName: 
-    pivot: {x: 0.20560749, y: -0.57608694}
+    pivot: {x: 0.20560749, y: 0.4673913}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -481,7 +481,7 @@ ScriptedImporter:
     uvTransform: {x: 841, y: 129}
   - name: Warrior_Blue_Frame_18
     originalName: 
-    pivot: {x: 0.28999996, y: -0.62921345}
+    pivot: {x: 0.28999996, y: 0.4494382}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -501,7 +501,7 @@ ScriptedImporter:
     uvTransform: {x: 430, y: 274}
   - name: Warrior_Blue_Frame_19
     originalName: 
-    pivot: {x: 0.75609756, y: -0.62921345}
+    pivot: {x: 0.75609756, y: 0.4494382}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -521,7 +521,7 @@ ScriptedImporter:
     uvTransform: {x: 631, y: 479}
   - name: Warrior_Blue_Frame_20
     originalName: 
-    pivot: {x: 0.7619048, y: -0.62921345}
+    pivot: {x: 0.7619048, y: 0.4494382}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -541,7 +541,7 @@ ScriptedImporter:
     uvTransform: {x: 359, y: 479}
   - name: Warrior_Blue_Frame_21
     originalName: 
-    pivot: {x: 0.7619048, y: -0.62921345}
+    pivot: {x: 0.7619048, y: 0.4494382}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -561,7 +561,7 @@ ScriptedImporter:
     uvTransform: {x: 451, y: 479}
   - name: Warrior_Blue_Frame_22
     originalName: 
-    pivot: {x: 0.30894306, y: -0.45999998}
+    pivot: {x: 0.30894306, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -581,7 +581,7 @@ ScriptedImporter:
     uvTransform: {x: 593, y: 4}
   - name: Warrior_Blue_Frame_23
     originalName: 
-    pivot: {x: 0.29508197, y: -0.59574467}
+    pivot: {x: 0.29508197, y: 0.42553192}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -601,7 +601,7 @@ ScriptedImporter:
     uvTransform: {x: 508, y: 129}
   - name: Warrior_Blue_Frame_24
     originalName: 
-    pivot: {x: 0.40000004, y: -0.6363636}
+    pivot: {x: 0.40000004, y: 0.4545455}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -621,7 +621,7 @@ ScriptedImporter:
     uvTransform: {x: 916, y: 274}
   - name: Warrior_Blue_Frame_25
     originalName: 
-    pivot: {x: 0.4871795, y: -0.55445546}
+    pivot: {x: 0.4871795, y: 0.39603963}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -641,7 +641,7 @@ ScriptedImporter:
     uvTransform: {x: 186, y: 479}
   - name: Warrior_Blue_Frame_26
     originalName: 
-    pivot: {x: 0.49397585, y: -0.5436893}
+    pivot: {x: 0.49397585, y: 0.38834953}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -661,7 +661,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 479}
   - name: Warrior_Blue_Frame_27
     originalName: 
-    pivot: {x: 0.49397585, y: -0.5436893}
+    pivot: {x: 0.49397585, y: 0.38834953}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -681,7 +681,7 @@ ScriptedImporter:
     uvTransform: {x: 95, y: 479}
   - name: Warrior_Blue_Frame_28
     originalName: 
-    pivot: {x: 0.42372882, y: -0.09489051}
+    pivot: {x: 0.42372882, y: 0.6058394}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -701,7 +701,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 129}
   - name: Warrior_Blue_Frame_29
     originalName: 
-    pivot: {x: 0.6179775, y: -0.20161289}
+    pivot: {x: 0.6179775, y: 0.57258064}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -721,7 +721,7 @@ ScriptedImporter:
     uvTransform: {x: 638, y: 129}
   - name: Warrior_Blue_Frame_30
     originalName: 
-    pivot: {x: 0.6363636, y: -0.5252526}
+    pivot: {x: 0.6363636, y: 0.44444445}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -741,7 +741,7 @@ ScriptedImporter:
     uvTransform: {x: 587, y: 590}
   - name: Warrior_Blue_Frame_31
     originalName: 
-    pivot: {x: 0.75, y: -0.6021505}
+    pivot: {x: 0.75, y: 0.43010753}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -761,7 +761,7 @@ ScriptedImporter:
     uvTransform: {x: 543, y: 479}
   - name: Warrior_Blue_Frame_32
     originalName: 
-    pivot: {x: 0.7530864, y: -0.59574467}
+    pivot: {x: 0.7530864, y: 0.42553192}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -781,7 +781,7 @@ ScriptedImporter:
     uvTransform: {x: 738, y: 274}
   - name: Warrior_Blue_Frame_33
     originalName: 
-    pivot: {x: 0.7530864, y: -0.59574467}
+    pivot: {x: 0.7530864, y: 0.42553192}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -801,7 +801,7 @@ ScriptedImporter:
     uvTransform: {x: 827, y: 274}
   - name: Warrior_Blue_Frame_34
     originalName: 
-    pivot: {x: 0.39041096, y: -0.23931624}
+    pivot: {x: 0.39041096, y: 0.5811966}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -821,7 +821,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Warrior_Blue_Frame_35
     originalName: 
-    pivot: {x: 0.24137934, y: -0.24786326}
+    pivot: {x: 0.24137934, y: 0.57264954}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -841,7 +841,7 @@ ScriptedImporter:
     uvTransform: {x: 469, y: 4}
   - name: Warrior_Blue_Frame_36
     originalName: 
-    pivot: {x: 0.34343436, y: -0.59574467}
+    pivot: {x: 0.34343436, y: 0.42553192}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -861,7 +861,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 274}
   - name: Warrior_Blue_Frame_37
     originalName: 
-    pivot: {x: 0.65254235, y: -0.56565654}
+    pivot: {x: 0.65254235, y: 0.40404043}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -881,7 +881,7 @@ ScriptedImporter:
     uvTransform: {x: 382, y: 129}
   - name: Warrior_Blue_Frame_38
     originalName: 
-    pivot: {x: 0.6355932, y: -0.55445546}
+    pivot: {x: 0.6355932, y: 0.39603963}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -901,7 +901,7 @@ ScriptedImporter:
     uvTransform: {x: 130, y: 129}
   - name: Warrior_Blue_Frame_39
     originalName: 
-    pivot: {x: 0.6355932, y: -0.55445546}
+    pivot: {x: 0.6355932, y: 0.39603963}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -921,7 +921,7 @@ ScriptedImporter:
     uvTransform: {x: 256, y: 129}
   - name: Warrior_Blue_Frame_40
     originalName: 
-    pivot: {x: 0.5037038, y: -0.53271025}
+    pivot: {x: 0.5037038, y: 0.36448598}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -941,7 +941,7 @@ ScriptedImporter:
     uvTransform: {x: 326, y: 4}
   - name: Warrior_Blue_Frame_41
     originalName: 
-    pivot: {x: 0.26530612, y: -0.53271025}
+    pivot: {x: 0.26530612, y: 0.36448598}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -961,7 +961,7 @@ ScriptedImporter:
     uvTransform: {x: 735, y: 129}
   - name: Warrior_Blue_Frame_42
     originalName: 
-    pivot: {x: 0.25316453, y: -0.5833333}
+    pivot: {x: 0.25316453, y: 0.4166667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -981,7 +981,7 @@ ScriptedImporter:
     uvTransform: {x: 272, y: 479}
   - name: Warrior_Blue_Frame_43
     originalName: 
-    pivot: {x: 0.20618555, y: -0.6086956}
+    pivot: {x: 0.20618555, y: 0.43478262}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -1001,7 +1001,7 @@ ScriptedImporter:
     uvTransform: {x: 325, y: 274}
   - name: Warrior_Blue_Frame_44
     originalName: 
-    pivot: {x: 0.20202018, y: -0.61538464}
+    pivot: {x: 0.20202018, y: 0.43956047}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -1021,7 +1021,7 @@ ScriptedImporter:
     uvTransform: {x: 111, y: 274}
   - name: Warrior_Blue_Frame_45
     originalName: 
-    pivot: {x: 0.20202018, y: -0.61538464}
+    pivot: {x: 0.20202018, y: 0.43956047}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -1041,7 +1041,7 @@ ScriptedImporter:
     uvTransform: {x: 218, y: 274}
   - name: Warrior_Blue_Frame_46
     originalName: 
-    pivot: {x: 0.54375005, y: -0.57}
+    pivot: {x: 0.54375005, y: 0.39}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -1061,7 +1061,7 @@ ScriptedImporter:
     uvTransform: {x: 158, y: 4}
   - name: Warrior_Blue_Frame_47
     originalName: 
-    pivot: {x: 0.72222227, y: -0.58762884}
+    pivot: {x: 0.72222227, y: 0.40206185}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -1081,7 +1081,7 @@ ScriptedImporter:
     uvTransform: {x: 724, y: 4}
   - name: Warrior_Blue_Frame_48
     originalName: 
-    pivot: {x: 0.59782606, y: -0.58947366}
+    pivot: {x: 0.59782606, y: 0.42105263}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:

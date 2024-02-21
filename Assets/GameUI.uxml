@@ -1,0 +1,3 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="HealthBarBackground" style="flex-grow: 0; background-image: url(&apos;project://database/Assets/Tiny%20Swords/UI/Buttons/Button_Red_3Slides.png?fileID=21300000&amp;guid=2af7d433724cf4f5687fb7d346cc4424&amp;type=3#Button_Red_3Slides&apos;); -unity-background-scale-mode: scale-to-fit; height: 15%; width: 276px; align-items: flex-start; align-self: flex-start; margin-top: 30px; margin-left: 30px;" />
+</ui:UXML>

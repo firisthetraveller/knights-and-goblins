@@ -111,24 +111,6 @@ public class AutoFootSteps : MonoBehaviour
                     playRandomOrdered(curSpec.HardSteps);
                 }
             }
-            else if (CurrentFootMaterialName == "Terrain")
-            {
-                float randomize = Random.Range(RandomizedVolumeRange.x, RandomizedVolumeRange.y);
-                _audioSource.volume = Volume * randomize;
-                if (_currentVelocity.magnitude < _walkThreshhold)
-                {
-                    _audioSource.volume *= .80f;
-                    playTerrainRandomOrdered(TerrainAction.Crouch);
-                }
-                else if (_currentVelocity.magnitude < _runThreshhold)
-                {
-                    playTerrainRandomOrdered(TerrainAction.Walk);
-                }
-                else
-                {
-                    playTerrainRandomOrdered(TerrainAction.Run);
-                }
-            }
         }
     }
 
@@ -149,14 +131,14 @@ public class AutoFootSteps : MonoBehaviour
                 // Do something with the tile (e.g., check its properties, react accordingly) then exit
                 if (tile != null)
                 {
-                    Debug.Log($"Tile found: {tile.name}, at: {playerTilePosition}");
+                    // Debug.Log($"Tile found: {tile.name}, at: {playerTilePosition}");
                     name = tile.name;
                     return true;
                     // You can perform further actions based on the tile found
                 }
             }
         }
-        Debug.Log($"No tile found at player's position on this tilemap");
+        // Debug.Log($"No tile found at player's position on this tilemap");
         name = "Air";
         return false;
     }
@@ -206,50 +188,6 @@ public class AutoFootSteps : MonoBehaviour
     {
         Jump, Land, Walk, Run, Crouch, Slip
     }
-    private void playTerrainRandomOrdered(TerrainAction type)
-    {
-        int i = 0;
-        foreach (float weight in CurrentTerrainAlphas)
-        {
-            if (weight == 0)
-            {
-                i++;
-                continue;
-            }
-
-
-
-            FootMaterialSpec foundSpec = CurrentFootProfile.MaterialSpecifications.FirstOrDefault(
-                spec => spec.SimilarNames.Any(simName => CurrentTerrain.terrainData.terrainLayers[i].diffuseTexture.name.Contains(simName, System.StringComparison.CurrentCultureIgnoreCase)));
-
-            if (foundSpec == null)
-                continue;
-            switch (type)
-            {
-                case TerrainAction.Jump:
-                    playRandomOrdered(foundSpec.Jumps, weight * foundSpec.VolumeMultiplier);
-                    break;
-                case TerrainAction.Land:
-                    playRandomOrdered(foundSpec.Lands, weight * foundSpec.VolumeMultiplier);
-                    break;
-                case TerrainAction.Walk:
-                    playRandomOrdered(foundSpec.MediumSteps, weight * foundSpec.VolumeMultiplier);
-                    break;
-                case TerrainAction.Run:
-                    playRandomOrdered(foundSpec.HardSteps, weight * foundSpec.VolumeMultiplier);
-                    break;
-                case TerrainAction.Crouch:
-                    playRandomOrdered(foundSpec.SoftSteps, weight * foundSpec.VolumeMultiplier);
-                    break;
-                case TerrainAction.Slip:
-                    playRandomOrdered(foundSpec.Scuffs, weight * foundSpec.VolumeMultiplier);
-                    break;
-            }
-
-            i++;
-        }
-    }
-    
     private void OnDrawGizmos() {
         Gizmos.color = Color.red;
         Gizmos.DrawSphere(Vector3Int.FloorToInt(transform.position), 0.2f);

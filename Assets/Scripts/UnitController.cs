@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class UnitController : MonoBehaviour
@@ -10,14 +9,25 @@ public class UnitController : MonoBehaviour
 
     public bool isFacingRight = true;
 
+    [Header("Floating invincibility")]
+    public float invincibilityInSeconds = 2.0f;
+    bool isInvincible = false;
+
+    [Header("Unit stats")]
+    public int maxHealth = 100;
+    private int currentHealth;
+    public int Health => currentHealth;
+
     [Header("Unit settings")]
     public float moveSpeed = 5;
 
     // Start is called before the first frame update
     private void Start()
     {
+        tag = "Unit";
         rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        currentHealth = maxHealth;
     }
 
     private void FixedUpdate()
@@ -52,5 +62,29 @@ public class UnitController : MonoBehaviour
         {
             Flip();
         }
+    }
+
+    public void ChangeHealth(int amount)
+    {
+        if (amount < 0)
+        {
+            if (isInvincible)
+            {
+                Debug.Log($"Hit during i-frames!");
+                return;
+            }
+            isInvincible = true;
+            Debug.Log($"i-frames on!");
+            StartCoroutine(InvincibilityOff());
+        }
+
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        Debug.Log($"{currentHealth} / {maxHealth}");
+    }
+
+    private IEnumerator InvincibilityOff() {
+        yield return new WaitForSeconds(invincibilityInSeconds);
+        isInvincible = false;
+        Debug.Log($"i-frames went away!");
     }
 }

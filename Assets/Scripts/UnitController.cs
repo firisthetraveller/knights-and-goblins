@@ -1,11 +1,13 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class UnitController : MonoBehaviour
 {
     protected Rigidbody2D body2D;
     private Animator animator;
     public GameObject projectilePrefab;
+    private UIHealthIcon healthBar;
 
     [HideInInspector]
     public Vector2 move;
@@ -35,6 +37,8 @@ public class UnitController : MonoBehaviour
     {
         body2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        healthBar = GetComponentInChildren<UIHealthIcon>();
+        SetHealthBarValue();
 
         if (!isFacingRight)
         {
@@ -64,6 +68,7 @@ public class UnitController : MonoBehaviour
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
+        healthBar.FlipSprite();
     }
 
     // Update is called once per frame
@@ -118,9 +123,13 @@ public class UnitController : MonoBehaviour
                 StartCoroutine(InvincibilityOff());
             }
         }
+        else if (amount == 0)
+        {
+            return;
+        }
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-        UIHandler.Instance.SetHealthValue(currentHealth / (float)maxHealth);
+        SetHealthBarValue();
 
         if (!IsAlive())
         {
@@ -128,6 +137,13 @@ public class UnitController : MonoBehaviour
             move = Vector2.zero;
             Destroy(gameObject, 1.15f);
         }
+    }
+
+    private void SetHealthBarValue()
+    {
+        int uiHealthValue = (int)Mathf.Ceil(currentHealth / 10);
+        healthBar.SetHealthValue((int)Mathf.Ceil(currentHealth / 10));
+        healthBar.gameObject.SetActive(uiHealthValue < 10);
     }
 
     private IEnumerator InvincibilityOff()

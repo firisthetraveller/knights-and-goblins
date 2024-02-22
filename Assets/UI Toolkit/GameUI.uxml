@@ -1,7 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement name="HealthBarBackground" style="flex-grow: 0; background-image: url(&apos;project://database/Assets/Tiny%20Swords/UI/Buttons/Button_Red_3Slides.png?fileID=21300000&amp;guid=2af7d433724cf4f5687fb7d346cc4424&amp;type=3#Button_Red_3Slides&apos;); -unity-background-scale-mode: stretch-to-fill; height: 15%; width: 276px; align-items: auto; align-self: auto; margin-top: 30px; margin-left: 30px;">
-        <ui:VisualElement name="HealthBarContainer" style="flex-grow: 1; align-items: auto; width: 100%; height: 100%; position: absolute;">
-            <ui:VisualElement name="HealthBar" style="flex-grow: 1; background-image: url(&apos;project://database/Assets/Tiny%20Swords/UI/Buttons/Button_Blue_3Slides.png?fileID=21300000&amp;guid=f757ef365725947d58cf2050c48ab10f&amp;type=3#Button_Blue_3Slides&apos;); align-items: auto; width: 100%; height: 100%; -unity-background-scale-mode: stretch-to-fill; align-self: flex-start; min-height: auto;" />
-        </ui:VisualElement>
-    </ui:VisualElement>
-</ui:UXML>

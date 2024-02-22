@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Commands")]
     public InputAction projectileAction;
+    public InputAction talkAction;
 
     [Header("Prefabs")]
     public GameObject projectilePrefab;
@@ -17,8 +18,10 @@ public class PlayerController : MonoBehaviour
         controller = GetComponent<UnitController>();
         body2D = GetComponent<Rigidbody2D>();
         projectileAction.Enable();
+        talkAction.Enable();
 
         projectileAction.performed += Launch;
+        talkAction.performed += FindFriend;
     }
 
     private void Update()
@@ -41,4 +44,18 @@ public class PlayerController : MonoBehaviour
         // animator.SetTrigger("Launch");
     }
 
+    void FindFriend(InputAction.CallbackContext context)
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(body2D.position + (0.1f + 0.1f * i) * Vector2.down, controller.isFacingRight ? Vector2.right : Vector2.left, 1.5f, LayerMask.GetMask("Units"));
+           // Debug.Log("Raycast");
+
+            if (hit.collider != null)
+            {
+                Debug.Log("Raycast has hit the object " + hit.collider.gameObject);
+                return;
+            }
+        }
+    }
 }

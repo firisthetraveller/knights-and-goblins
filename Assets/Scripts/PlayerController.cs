@@ -9,5 +9,6 @@ public class PlayerController : MonoBehaviour {
 
     private void Update() {
         controller.move = new(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        controller.move.Normalize();
     }
 }

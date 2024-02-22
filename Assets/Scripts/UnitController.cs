@@ -23,17 +23,24 @@ public class UnitController : MonoBehaviour
     [Header("Unit settings")]
     public float moveSpeed = 5;
 
+    private void Awake() {
+        tag = "Unit";
+        currentHealth = maxHealth;
+    }
+
     // Start is called before the first frame update
     private void Start()
     {
-        tag = "Unit";
         rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        currentHealth = maxHealth;
-
+        
         if (!isFacingRight) {
-            Flip();
+            FlipSprite();
         }
+    }
+
+    public bool IsAlive() {
+        return currentHealth > 0;
     }
 
     private void FixedUpdate()
@@ -44,10 +51,12 @@ public class UnitController : MonoBehaviour
 
     private void Flip()
     {
-        // Switch the way the player is labelled as facing
         isFacingRight = !isFacingRight;
+        FlipSprite();
+    }
 
-        // Multiply the player's x local scale by -1
+    private void FlipSprite()
+    {
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;

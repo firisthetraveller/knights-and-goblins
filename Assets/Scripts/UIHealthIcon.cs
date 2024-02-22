@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 public class UIHealthIcon : MonoBehaviour {
+    public static bool displayHealthBars = true;
+
     [HideInInspector]
     public int currentHealth;
 
@@ -15,6 +17,7 @@ public class UIHealthIcon : MonoBehaviour {
     public void SetHealthValue(int value) {
         currentHealth = value;
         text.text = value.ToString();
+        gameObject.SetActive(displayHealthBars && value > 0 && value < 10);
     }
 
     public void FlipSprite()

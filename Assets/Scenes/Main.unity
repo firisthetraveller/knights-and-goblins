@@ -6439,9 +6439,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 294718589}
     m_Modifications:
+    - target: {fileID: 5404552219552743667, guid: 32dd4e4433041452b8ba84416dd3c68d, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 2353968956740292660, guid: eb8736268475648babf534aa3fd33a2c, type: 3}
+    - target: {fileID: 5404552219552743667, guid: 32dd4e4433041452b8ba84416dd3c68d, type: 3}
+      propertyPath: talkAction.m_Name
+      value: Talk
+      objectReference: {fileID: 0}
     - target: {fileID: 6319210030457366065, guid: 32dd4e4433041452b8ba84416dd3c68d, type: 3}
       propertyPath: m_Name
       value: Warrior_Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 6319210030457366065, guid: 32dd4e4433041452b8ba84416dd3c68d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6512102279661260372, guid: 32dd4e4433041452b8ba84416dd3c68d, type: 3}
       propertyPath: m_LocalPosition.x

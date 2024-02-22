@@ -1,14 +1,10 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class UnitController : MonoBehaviour
 {
-    public static bool displayHealthBars = true;
-
     protected Rigidbody2D body2D;
     private Animator animator;
-    public GameObject projectilePrefab;
     private UIHealthIcon healthBar;
 
     [HideInInspector]
@@ -87,25 +83,6 @@ public class UnitController : MonoBehaviour
         {
             Flip();
         }
-
-        if (Input.GetButtonDown("Projectile"))
-        {
-            Launch();
-        }
-    }
-
-    void Launch()
-    {
-        if (!projectilePrefab)
-            return;
-
-        GameObject projectileObject = Instantiate(projectilePrefab, body2D.position + Vector2.up * 0.3f, Quaternion.identity);
-
-        Projectile projectile = projectileObject.GetComponent<Projectile>();
-        projectile.originShooter = gameObject;
-        if (!isFacingRight) projectile.FlipSprite();
-        projectile.Launch(isFacingRight ? Vector2.right : Vector2.left, 300);
-        // animator.SetTrigger("Launch");
     }
 
     public void ChangeHealth(int amount)
@@ -143,9 +120,7 @@ public class UnitController : MonoBehaviour
 
     private void SetHealthBarValue()
     {
-        int uiHealthValue = (int)Mathf.Ceil(currentHealth / 10);
         healthBar.SetHealthValue((int)Mathf.Ceil(currentHealth / 10));
-        healthBar.gameObject.SetActive(displayHealthBars && uiHealthValue < 10);
     }
 
     private IEnumerator InvincibilityOff()

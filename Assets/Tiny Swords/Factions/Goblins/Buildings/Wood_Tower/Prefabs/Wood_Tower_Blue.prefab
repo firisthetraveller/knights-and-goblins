@@ -13,6 +13,10 @@ PrefabInstance:
       value: Wood_Tower_Blue
       objectReference: {fileID: 0}
     - target: {fileID: 1160356261127867848, guid: 304c9c92dec8b46b19e63662b045892c, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 6d2fbee45fc394693a8757de73b4d097, type: 2}
+    - target: {fileID: 1160356261127867848, guid: 304c9c92dec8b46b19e63662b045892c, type: 3}
       propertyPath: m_UpdateMode
       value: 0
       objectReference: {fileID: 0}
@@ -22,11 +26,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 304c9c92dec8b46b19e63662b045892c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.27
+      value: 2.2
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 304c9c92dec8b46b19e63662b045892c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.77
+      value: -1.54
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 304c9c92dec8b46b19e63662b045892c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -38,15 +42,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 304c9c92dec8b46b19e63662b045892c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 304c9c92dec8b46b19e63662b045892c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 304c9c92dec8b46b19e63662b045892c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 304c9c92dec8b46b19e63662b045892c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e68967fb8cad4dfe8b7aeb440aa2190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 0}
   move: {x: 0, y: 0}
   isFacingRight: 0
   invincibilityInSeconds: 0

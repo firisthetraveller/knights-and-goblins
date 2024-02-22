@@ -4,6 +4,8 @@ using UnityEngine.UIElements;
 
 public class UnitController : MonoBehaviour
 {
+    public static bool displayHealthBars = true;
+
     protected Rigidbody2D body2D;
     private Animator animator;
     public GameObject projectilePrefab;
@@ -143,7 +145,7 @@ public class UnitController : MonoBehaviour
     {
         int uiHealthValue = (int)Mathf.Ceil(currentHealth / 10);
         healthBar.SetHealthValue((int)Mathf.Ceil(currentHealth / 10));
-        healthBar.gameObject.SetActive(uiHealthValue < 10);
+        healthBar.gameObject.SetActive(displayHealthBars && uiHealthValue < 10);
     }
 
     private IEnumerator InvincibilityOff()

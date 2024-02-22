@@ -3,9 +3,11 @@ using UnityEngine;
 
 public class UnitController : MonoBehaviour
 {
-    private Rigidbody2D rigidbody2D;
+    protected Rigidbody2D rigidbody2D;
     private Animator animator;
-    private Vector2 move;
+
+    [HideInInspector]
+    public Vector2 move;
 
     public bool isFacingRight = true;
 
@@ -28,6 +30,10 @@ public class UnitController : MonoBehaviour
         rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         currentHealth = maxHealth;
+
+        if (!isFacingRight) {
+            Flip();
+        }
     }
 
     private void FixedUpdate()
@@ -50,7 +56,6 @@ public class UnitController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        move = new(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         animator.SetBool("isMoving", move.x != 0 || move.y != 0);
 
         // Don't reverse animation if only moving up or down
@@ -73,16 +78,21 @@ public class UnitController : MonoBehaviour
                 Debug.Log($"Hit during i-frames!");
                 return;
             }
-            isInvincible = true;
-            Debug.Log($"i-frames on!");
-            StartCoroutine(InvincibilityOff());
+
+            if (invincibilityInSeconds > 0)
+            {
+                isInvincible = true;
+                Debug.Log($"i-frames on!");
+                StartCoroutine(InvincibilityOff());
+            }
         }
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-        Debug.Log($"{currentHealth} / {maxHealth}");
+        UIHandler.Instance.SetHealthValue(currentHealth / (float)maxHealth);
     }
 
-    private IEnumerator InvincibilityOff() {
+    private IEnumerator InvincibilityOff()
+    {
         yield return new WaitForSeconds(invincibilityInSeconds);
         isInvincible = false;
         Debug.Log($"i-frames went away!");

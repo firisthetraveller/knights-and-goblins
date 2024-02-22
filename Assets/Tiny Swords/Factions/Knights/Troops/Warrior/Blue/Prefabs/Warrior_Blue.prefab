@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 8219361466715230837}
   - component: {fileID: 5404552219552743667}
   - component: {fileID: 7950544669839326924}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Warrior_Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -351,6 +351,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78fb2aa80d8944f4b9333a30c92b1b92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectileAction:
+    m_Name: Projectile
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: b7fb90db-cfd6-489c-afb8-a600efbc5dfe
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 2d9cea57-c0f1-4a8f-bbaf-f5dc220536e7
+      m_Path: <Keyboard>/c
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Projectile
+      m_Flags: 0
+    m_Flags: 0
+  talkAction:
+    m_Name: Talk
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: 0b6cea86-a790-40f1-83b2-e0866da62792
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 91e06c82-3d50-4b76-8c2e-78be50a0c55d
+      m_Path: <Keyboard>/f
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Talk
+      m_Flags: 0
+    m_Flags: 0
+  projectilePrefab: {fileID: 0}
 --- !u!114 &7950544669839326924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,7 +398,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e68967fb8cad4dfe8b7aeb440aa2190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 0}
   move: {x: 0, y: 0}
   isFacingRight: 1
   invincibilityInSeconds: 2

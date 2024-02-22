@@ -3,8 +3,9 @@ using UnityEngine;
 
 public class UnitController : MonoBehaviour
 {
-    protected Rigidbody2D rigidbody2D;
+    protected Rigidbody2D body2D;
     private Animator animator;
+    public GameObject projectilePrefab;
 
     [HideInInspector]
     public Vector2 move;
@@ -23,7 +24,8 @@ public class UnitController : MonoBehaviour
     [Header("Unit settings")]
     public float moveSpeed = 5;
 
-    private void Awake() {
+    private void Awake()
+    {
         tag = "Unit";
         currentHealth = maxHealth;
     }
@@ -31,22 +33,24 @@ public class UnitController : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        rigidbody2D = GetComponent<Rigidbody2D>();
+        body2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        
-        if (!isFacingRight) {
+
+        if (!isFacingRight)
+        {
             FlipSprite();
         }
     }
 
-    public bool IsAlive() {
+    public bool IsAlive()
+    {
         return currentHealth > 0;
     }
 
     private void FixedUpdate()
     {
-        Vector2 position = rigidbody2D.position + Time.deltaTime * moveSpeed * move;
-        rigidbody2D.MovePosition(position);
+        Vector2 position = body2D.position + Time.deltaTime * moveSpeed * move;
+        body2D.MovePosition(position);
     }
 
     private void Flip()
@@ -76,6 +80,25 @@ public class UnitController : MonoBehaviour
         {
             Flip();
         }
+
+        if (Input.GetButtonDown("Projectile"))
+        {
+            Launch();
+        }
+    }
+
+    void Launch()
+    {
+        if (!projectilePrefab)
+            return;
+
+        GameObject projectileObject = Instantiate(projectilePrefab, body2D.position + Vector2.up * 0.3f, Quaternion.identity);
+
+        Projectile projectile = projectileObject.GetComponent<Projectile>();
+        projectile.originShooter = gameObject;
+        if (!isFacingRight) projectile.FlipSprite();
+        projectile.Launch(isFacingRight ? Vector2.right : Vector2.left, 300);
+        // animator.SetTrigger("Launch");
     }
 
     public void ChangeHealth(int amount)
@@ -98,6 +121,13 @@ public class UnitController : MonoBehaviour
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         UIHandler.Instance.SetHealthValue(currentHealth / (float)maxHealth);
+
+        if (!IsAlive())
+        {
+            animator.SetTrigger("Dead");
+            move = Vector2.zero;
+            Destroy(gameObject, 1.15f);
+        }
     }
 
     private IEnumerator InvincibilityOff()

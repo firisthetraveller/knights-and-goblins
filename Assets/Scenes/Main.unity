@@ -1631,7 +1631,7 @@ GameObject:
   - component: {fileID: 714346142}
   - component: {fileID: 714346144}
   - component: {fileID: 714346143}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Water Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5391,7 +5391,7 @@ GameObject:
   - component: {fileID: 2048934307}
   - component: {fileID: 2048934306}
   - component: {fileID: 2048934305}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Unwalkable Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6552,6 +6552,10 @@ PrefabInstance:
       propertyPath: tilemaps.Array.data[1]
       value: 
       objectReference: {fileID: 1150330339}
+    - target: {fileID: 7950544669839326924, guid: 32dd4e4433041452b8ba84416dd3c68d, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 2353968956740292660, guid: eb8736268475648babf534aa3fd33a2c, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

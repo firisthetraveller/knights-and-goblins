@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class UnitController : MonoBehaviour
@@ -15,6 +16,10 @@ public class UnitController : MonoBehaviour
     [Header("Floating invincibility")]
     public float invincibilityInSeconds = 2.0f;
     bool isInvincible = false;
+
+    [Header("Dialogue")]
+    public string NPCName;
+    public List<string> lines = new();
 
     [Header("Unit stats")]
     public int maxHealth = 100;
@@ -42,6 +47,10 @@ public class UnitController : MonoBehaviour
         {
             FlipSprite();
         }
+    }
+
+    public bool HasDialogue() {
+        return lines.Count > 0;
     }
 
     public bool IsAlive()

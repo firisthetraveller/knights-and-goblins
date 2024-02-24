@@ -401,6 +401,8 @@ MonoBehaviour:
   move: {x: 0, y: 0}
   isFacingRight: 1
   invincibilityInSeconds: 2
+  NPCName: Blue Warrior
+  lines: []
   maxHealth: 100
   moveSpeed: 3
 --- !u!1001 &1181605743180979901

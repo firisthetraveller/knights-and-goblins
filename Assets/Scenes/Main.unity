@@ -308,6 +308,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Torch_Blue
       objectReference: {fileID: 0}
+    - target: {fileID: 4159634973511872566, guid: 0f10680e623af4526b65ffb59d0b14d9, type: 3}
+      propertyPath: NPCName
+      value: That blue dude
+      objectReference: {fileID: 0}
+    - target: {fileID: 4159634973511872566, guid: 0f10680e623af4526b65ffb59d0b14d9, type: 3}
+      propertyPath: lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4159634973511872566, guid: 0f10680e623af4526b65ffb59d0b14d9, type: 3}
+      propertyPath: lines.Array.data[0]
+      value: I'm patrolling for any suspicious dude on the bridge. You're not suspicious,
+        aren't you?
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4825,6 +4838,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 62598805741098106, guid: f1cd6c31d241e497c99405700898b9c3, type: 3}
   m_PrefabInstance: {fileID: 1374896808}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1485543826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1485543827}
+  m_Layer: 0
+  m_Name: UI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1485543827
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485543826}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.312332, y: -1.3296298, z: -0.048569508}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1759850506}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1545245269
 GameObject:
   m_ObjectHideFlags: 0
@@ -4862,6 +4907,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4091124367125127540, guid: dc44952b3a34d45cea3237b0d5144c70, type: 3}
   m_PrefabInstance: {fileID: 7888492994310452614}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1759850505
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1759850506}
+  - component: {fileID: 1759850507}
+  - component: {fileID: 1759850508}
+  m_Layer: 5
+  m_Name: GameUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1759850506
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759850505}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.312332, y: 1.3296298, z: 0.048569508}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1485543827}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1759850507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759850505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PanelSettings: {fileID: 11400000, guid: 285f80d9a6aef4f1285db7653a847bba, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: abae7233c4e0c4664ad65217bbadc180, type: 3}
+  m_SortingOrder: 0
+--- !u!114 &1759850508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759850505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f377b61fc17bd418fa3521844301cd3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayDialogueTime: 4
 --- !u!1 &1775290323
 GameObject:
   m_ObjectHideFlags: 0
@@ -6525,6 +6632,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 778139647}
     m_Modifications:
+    - target: {fileID: 4362439235084891943, guid: 0117f1dc2f8d74c7eabca34e07fe0a15, type: 3}
+      propertyPath: NPCName
+      value: Dark Sasuke From The Shadows
+      objectReference: {fileID: 0}
+    - target: {fileID: 4362439235084891943, guid: 0117f1dc2f8d74c7eabca34e07fe0a15, type: 3}
+      propertyPath: lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4362439235084891943, guid: 0117f1dc2f8d74c7eabca34e07fe0a15, type: 3}
+      propertyPath: lines.Array.data[0]
+      value: S-Step aside. I'm practicing my n-ninja run.
+      objectReference: {fileID: 0}
     - target: {fileID: 5939467443053658014, guid: 0117f1dc2f8d74c7eabca34e07fe0a15, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.99
@@ -6930,3 +7049,4 @@ SceneRoots:
   - {fileID: 1775290325}
   - {fileID: 1545245270}
   - {fileID: 465167141}
+  - {fileID: 1485543827}

@@ -53,7 +53,13 @@ public class PlayerController : MonoBehaviour
 
             if (hit.collider != null)
             {
-                Debug.Log("Raycast has hit the object " + hit.collider.gameObject);
+                UnitController otherController = hit.collider.gameObject.GetComponent<UnitController>();
+
+                if (otherController.HasDialogue()) {
+                    UIHandler.Instance.DisplayDialogue(otherController.NPCName, otherController.lines[Random.Range(0, otherController.lines.Count)]);
+                } else {
+                    Debug.Log($"Unit {otherController.NPCName} hit, but no dialogue has been set.");
+                }
                 return;
             }
         }

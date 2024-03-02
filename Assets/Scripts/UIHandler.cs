@@ -30,9 +30,7 @@ public class UIHandler : MonoBehaviour
         dialogueBox.style.display = DisplayStyle.Flex;
         dialogueBox.Q<Label>("Name").text = name;
         dialogueBox.Q<Label>("Dialogue").text = content;
-        Debug.Log($"Dialogue: ({name}, {content})");
         StartCoroutine(HideDialogueBox());
-        Debug.Log($"{dialogueBox.Children()}");
     }
 
     IEnumerator HideDialogueBox() {
